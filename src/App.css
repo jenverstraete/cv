@@ -1,33 +1,75 @@
-.App {
+p {
+  margin-bottom: 0 !important;
+}
+
+.backgroundBlack {
+  background-color: black;
+}
+
+.backgroundLightgrey {
+  background-color: #efefef;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.centeredText {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.circle {
+  padding: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fullWidth {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.inline {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.marginBottomSmall {
+  margin-bottom: 0.5em;
+}
+
+.paddingM {
+  padding: 20px;
+}
+
+.paddingLeftM {
+  padding-left: 20px;
+}
+
+.paddingTopS {
+  padding-top: 10px;
+}
+
+.paddingTopM {
+  padding-top: 20px;
+}
+
+.roundedImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.section {
+  border: 1px solid #777;
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+.underlined {
+  text-decoration: underline
+}
+
+.verticalAligned {
+  vertical-align: middle;
 }
