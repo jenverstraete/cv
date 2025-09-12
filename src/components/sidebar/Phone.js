@@ -1,22 +1,21 @@
-import React from "../../../node_modules/react";
 import { colors } from "../../properties";
 import CircleIcon from "../icons/CircleIcon";
 import ContainerPaddingLeft from "../UI/ContainerPaddingLeft";
 import PhoneIcon from "../icons/Phone";
 import Text from "../UI/Text";
-import { Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
 
-const Phone = () => (
-  <div className="col-12 paddingTopS">
-    <CircleIcon backgroundColor={colors.backgroundColorContrast}>
-      <PhoneIcon fill={colors.backgroundColorAccent} width="100%" height="100%" />
+export default function Phone() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopS">
+    <CircleIcon backgroundColor={colors.white}>
+      <PhoneIcon fill={colors.backgroundColorContrast} width="100%" height="100%" />
     </CircleIcon>
     <ContainerPaddingLeft>
-      <Text>
-        <Translate id="phone" />
+      <Text textColor="white">
+        {t('phone')}
       </Text>
     </ContainerPaddingLeft>
   </div>
-);
-
-export default Phone;
+}

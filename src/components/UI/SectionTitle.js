@@ -7,7 +7,7 @@ import { colors } from "../../properties";
 const SectionTitle = props => (
   <div className="row">
     <div className="col-12 paddingTopM">
-      <CircleIcon>{props.icon}</CircleIcon>
+      <CircleIcon backgroundColor={colors.backgroundColorContrast}>{props.icon}</CircleIcon>
       <ContainerPaddingLeft>
         <TitleM textColor={colors.textColorContrast}>{props.text}</TitleM>
       </ContainerPaddingLeft>

@@ -1,12 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { LocalizeProvider } from "react-localize-redux";
+import { createRoot } from 'react-dom/client';
+import "./i18n/config.ts";
 
-ReactDOM.render(
-  <LocalizeProvider>
-    <App />
-  </LocalizeProvider>,
-  document.getElementById("root")
+import App from './App'
+
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <App />
 );

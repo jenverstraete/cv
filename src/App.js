@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import { withLocalize } from "react-localize-redux";
-import LanguageSetup from "./containers/LanguageSetup";
 import WorkExperience from "./components/main/WorkExperience";
 import Courses from "./components/main/Courses";
 import OtherProjects from "./components/main/OtherProjects";
@@ -22,10 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid h-100 w-100 backgroundLightgrey">
-        <LanguageSetup />
         <div className="row">
-          <div className="col-8 paddingM">{this.main}</div>
-          <div className="col-4 backgroundBlack paddingM">{this.sidebar}</div>
+          <div className="col-3 backgroundAccent paddingM">{this.sidebar}</div>
+          <div className="col-9 paddingM">{this.main}</div>
         </div>
       </div>
     );
@@ -36,16 +33,17 @@ class App extends Component {
       <div>
         <Function />
         <WorkExperience />
-        <OtherProjects />
         <Courses />
         <Skills />
+
       </div>
     );
-    /*
-        <div className="row">
-          <Advantages />
-          <Disadvantages />
-        </div> */
+
+    /*<div className="row">
+        <OtherProjects />
+      <Advantages />
+      <Disadvantages />
+    </div> */
   }
 
   get sidebar() {
@@ -64,4 +62,4 @@ class App extends Component {
   }
 }
 
-export default withLocalize(App);
+export default App;

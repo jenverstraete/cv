@@ -1,17 +1,16 @@
-import React from "../../../node_modules/react";
 import TitleS from "../UI/TitleS";
 import Text from "../UI/Text";
-import { withLocalize, Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
 
-const Aboutme = () => (
-  <div className="col-12 paddingTopM">
-    <TitleS>
-      <Translate id="generalTitle" />
+export default function AboutMe() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopM marginTopL">
+    <TitleS textColor="white">
+      {t('generalTitle')}
     </TitleS>
-    <Text>
-      <Translate id="generalInfo" />
+    <Text textColor="white">
+      {t('generalInfo')}
     </Text>
   </div>
-);
-
-export default withLocalize(Aboutme);
+}

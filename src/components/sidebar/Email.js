@@ -1,22 +1,21 @@
-import React from "../../../node_modules/react";
 import { colors } from "../../properties";
 import CircleIcon from "../icons/CircleIcon";
 import ContainerPaddingLeft from "../UI/ContainerPaddingLeft";
 import Envelope from "../icons/Envelope";
 import Text from "../UI/Text";
-import { Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
 
-const Email = () => (
-  <div className="col-12 paddingTopS">
-    <CircleIcon backgroundColor={colors.backgroundColorContrast}>
-      <Envelope fill={colors.backgroundColorAccent} width="100%" height="100%" />
+export default function Email() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopS">
+    <CircleIcon backgroundColor={colors.white}>
+      <Envelope fill={colors.backgroundColorContrast} width="100%" height="100%" />
     </CircleIcon>
     <ContainerPaddingLeft>
-      <Text>
-        <Translate id="email" />
+      <Text textColor="white">
+        {t('email')}
       </Text>
     </ContainerPaddingLeft>
   </div>
-);
-
-export default Email;
+}

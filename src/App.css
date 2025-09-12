@@ -6,8 +6,10 @@ p {
   background-color: black;
 }
 
-.backgroundLightgrey {
-  background-color: #efefef;
+.backgroundAccent {
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  background-color: #000050;
 }
 
 .centered {
@@ -37,6 +39,10 @@ p {
   margin-bottom: 0.5em;
 }
 
+.marginTopL {
+  margin-top: 2em;
+}
+
 .paddingM {
   padding: 20px;
 }
@@ -55,15 +61,14 @@ p {
 
 .roundedImage {
   width: 200px;
-  height: 200px;
   border-radius: 100px;
+  padding: 0;
 }
 
 .section {
-  border: 1px solid #777;
-  padding: 1em;
-  border-radius: 1em;
-  margin-top: 1em;
+  /*border: 1px solid #777;*/
+  padding-left: 5em;
+  margin-bottom: 2em;
 }
 
 .underlined {

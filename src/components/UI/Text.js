@@ -3,13 +3,13 @@ import { colors } from "../../properties";
 
 const Text = props => (
   <p
-    className={(props.centered ? "centeredText" : "") + " " + (props.underlined ? "underlined" : "")}
+    className={(props.marginTop ? "marginTop" : "") + " " + (props.centered ? "centeredText" : "") + " " + (props.underlined ? "underlined" : "")}
     style={{
       color: props.textColor ? props.textColor : colors.textColorDefault,
       marginBottom: 0,
       fontStyle: props.italic ? "italic" : "normal",
-      fontWeight: props.bold ? "bold": "",
-      fontSize: props.small ? "small": ""
+      fontWeight: props.bold ? "bold" : "",
+      fontSize: props.small ? "small" : ""
     }}
   >
     {props.children}

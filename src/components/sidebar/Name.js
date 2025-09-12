@@ -1,13 +1,12 @@
-import React from "../../../node_modules/react";
 import TitleM from "../UI/TitleM";
-import { withLocalize, Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
 
-const Name = () => (
-  <div className="col-12 paddingTopS">
-    <TitleM>
-      <Translate id="name" />
+export default function Name() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopS">
+    <TitleM textColor="white">
+      {t('name')}
     </TitleM>
   </div>
-);
-
-export default withLocalize(Name);
+}

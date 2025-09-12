@@ -1,13 +1,12 @@
-import React from "../../../node_modules/react";
 import Text from "../UI/Text";
-import { withLocalize, Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
 
-const Languages = () => (
-  <div className="col-12 paddingTopS">
-    <Text centered={true}>
-      <Translate id="languages" />
+export default function Languages() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopS">
+    <Text centered={true} textColor="white">
+      {t('languages')}
     </Text>
   </div>
-);
-
-export default withLocalize(Languages);
+}

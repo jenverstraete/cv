@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import SectionTitle from "../UI/SectionTitle";
 import { colors } from "../../properties";
 import Tools from "../icons/Tools";
-import { withLocalize, Translate } from "react-localize-redux";
 import Text from "../UI/Text";
+import { withTranslation } from 'react-i18next';
 
 class Skills extends Component {
   render() {
     return (
       <div>
         <SectionTitle
-          icon={<Tools fill={colors.backgroundColorContrast} width="100%" height="100%" />}
-          text={this.props.translate("skillsTitle")}
+          icon={<Tools fill={colors.white} width="100%" height="100%" />}
+          text={this.props.t("skillsTitle")}
         />
         <div className="section">
           {this.showSkill("skills1")}
@@ -25,12 +25,12 @@ class Skills extends Component {
   showSkill(skill) {
     return (
       <div className="paddingTopS">
-        <Text textColor={colors.textColorContrast}>
-          <Translate id={skill} />
+        <Text textColor={colors.textColorDefault}>
+          {this.props.t(skill)}
         </Text>
       </div>
     );
   }
 }
 
-export default withLocalize(Skills);
+export default withTranslation()(Skills);

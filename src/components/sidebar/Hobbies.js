@@ -1,17 +1,24 @@
-import React from "../../../node_modules/react";
 import TitleS from "../UI/TitleS";
 import Text from "../UI/Text";
-import { withLocalize, Translate } from "react-localize-redux";
+import { useTranslation } from 'react-i18next';
+import { colors } from "../../properties";
 
-const Hobbies = () => (
-  <div className="col-12 paddingTopM">
-    <TitleS>
-      <Translate id="hobbyTitle" />
+export default function Hobbies() {
+  const { t } = useTranslation();
+
+  return <div className="col-12 paddingTopM marginTopL">
+    <TitleS textColor="white">
+      {t('hobbyTitle')}
     </TitleS>
-    <Text>
-      <Translate id="hobbyInfo" />
+    <Text textColor={colors.white}>
+      {t("hobby1")}
+      <a href="https://www.eternalbreath.be" target="_blank" rel="noreferrer">www.eternalbreath.be</a>
+    </Text>
+    <Text marginTop textColor={colors.white}>
+      {t("hobby2")}
+    </Text>
+    <Text marginTop textColor={colors.white}>
+      {t("hobby3")}
     </Text>
   </div>
-);
-
-export default withLocalize(Hobbies);
+}

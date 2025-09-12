@@ -1,9 +1,11 @@
 export const colors = {
   backgroundColorDefault: "black",
-  backgroundColorContrast: "yellow",
-  textColorDefault: "white",
-  textColorContrast: "black",
-  textColorAccent: "yellow",
+  backgroundColorContrast: "#000080",
+  textColorDefault: "black",
+  textColorContrast: "#000080",
+  textColorAccent: "#000080",
+  lightgrey: "lightgrey",
+  white: "white"
 };
 
 export const dimensions = {

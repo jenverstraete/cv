@@ -3,16 +3,16 @@ import SectionTitle from "../UI/SectionTitle";
 import SectionSubtitle from "../UI/SectionSubtitle";
 import { colors } from "../../properties";
 import Star from "../icons/Star";
-import { withLocalize, Translate } from "react-localize-redux";
 import Text from "../UI/Text";
+import { withTranslation } from 'react-i18next';
 
 class OtherProjects extends Component {
   render() {
     return (
       <div>
         <SectionTitle
-          icon={<Star fill={colors.backgroundColorContrast} width="100%" height="100%" />}
-          text={this.props.translate("otherProjects")}
+          icon={<Star fill={colors.white} width="100%" height="100%" />}
+          text={this.props.t("otherProjects")}
         />
         {this.showOtherProjectEntry("otherProject1")}
         {this.showOtherProjectEntry("otherProject2")}
@@ -23,13 +23,13 @@ class OtherProjects extends Component {
   showOtherProjectEntry(project) {
     return (
       <div className="section">
-        <SectionSubtitle text={this.props.translate(project)} />
-        <Text textColor={colors.textColorContrast}>
-          <Translate id={project + "Description"} />
+        <SectionSubtitle text={this.props.t(project)} />
+        <Text textColor={colors.textColorDefault}>
+          {this.props.t(project + "Description")}
         </Text>
       </div>
     );
   }
 }
 
-export default withLocalize(OtherProjects);
+export default withTranslation()(OtherProjects);
