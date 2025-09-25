@@ -26,8 +26,8 @@ class WorkExperience extends Component {
     return (
       <div>
         <SectionSubtitle text={this.props.t("employer3info")} />
+        {this.employer3_project3}
         {this.employer3project1}
-        {this.employer3_otherProjects}
         {this.employer3project2}
       </div>
     );
@@ -35,7 +35,7 @@ class WorkExperience extends Component {
 
   get employer3project1() {
     return (
-      <div>
+      <div className="paddingTopM">
         <Text italic={true} textColor={colors.textColorDefault} underlined={true}>
           {this.props.t("employer3projectTitle1")}
         </Text>
@@ -61,7 +61,7 @@ class WorkExperience extends Component {
     );
   }
 
-  get employer3_otherProjects() {
+  get employer3_project3() {
     return (
       <div className="paddingTopM">
         <Text italic={true} textColor={colors.textColorDefault} underlined={true}>
@@ -81,6 +81,7 @@ class WorkExperience extends Component {
         <SectionSubtitle text={this.props.t("employer2info")} />
         {this.employer2project1}
         {this.employer2project2}
+        {this.employer2project3}
       </div>
     );
   }
@@ -108,6 +109,20 @@ class WorkExperience extends Component {
         <Text textColor={colors.textColorDefault}>{this.props.t("employer2projectDescription2")}</Text>
         <Text italic={true} bold={true} small={true} textColor={colors.textColorDefault}>
           {this.props.t("employer2project2skills1")}
+        </Text>
+      </div>
+    );
+  }
+
+  get employer2project3() {
+    return (
+      <div className="paddingTopM">
+        <Text italic={true} textColor={colors.textColorDefault} underlined={true}>
+          {this.props.t("employer2projectTitle3")}
+        </Text>
+        <Text textColor={colors.textColorDefault}>{this.props.t("employer2projectDescription3")}</Text>
+        <Text italic={true} bold={true} small={true} textColor={colors.textColorDefault}>
+          {this.props.t("employer2project3skills1")}
         </Text>
       </div>
     );
