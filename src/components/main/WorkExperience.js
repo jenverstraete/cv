@@ -27,8 +27,8 @@ class WorkExperience extends Component {
       <div>
         <SectionSubtitle text={this.props.t("employer3info")} />
         {this.employer3project1}
-        {this.employer3project2}
         {this.employer3_otherProjects}
+        {this.employer3project2}
       </div>
     );
   }
@@ -118,8 +118,10 @@ class WorkExperience extends Component {
       <div>
         <SectionSubtitle text={this.props.t("employer1info")} />
         {this.employer1project1}
-        {this.employer1project2}
-        {this.employer1_OtherProjects}
+        {//this.employer1project2
+        }
+        {//this.employer1_OtherProjects
+        }
       </div>
     );
   }
@@ -134,9 +136,13 @@ class WorkExperience extends Component {
         <Text italic={true} bold={true} small={true} textColor={colors.textColorDefault}>
           {this.props.t("employer1project1skills1")}
           <br />
-          {this.props.t("employer1project1skills2")}
+          {
+            //this.props.t("employer1project1skills2")
+          }
           <br />
-          {this.props.t("employer1project1skills3")}
+          {
+            //this.props.t("employer1project1skills3")
+          }
         </Text>
       </div>
     );
